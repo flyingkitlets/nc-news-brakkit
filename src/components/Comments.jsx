@@ -164,7 +164,9 @@ class Comments extends Component {
                 </li>
               );
             })}
-            <button onClick={this.hideAllComments}>Hide Comments</button>
+            <button className="hide-comments" onClick={this.hideAllComments}>
+              Hide Comments
+            </button>
           </div>
         )}
       </div>

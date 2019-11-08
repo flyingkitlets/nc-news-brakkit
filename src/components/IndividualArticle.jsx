@@ -6,6 +6,7 @@ import Comments from "./Comments";
 import ErrorPage from "./ErrorPage";
 import Votes from "./Votes";
 import formatDates from "../utils/data-manipulation";
+import IsLoading from "./IsLoading";
 
 class IndividualArticle extends Component {
   state = {
@@ -13,7 +14,7 @@ class IndividualArticle extends Component {
     upVoted: false,
     downVoted: false,
     err: "",
-    isloading: true
+    isLoading: true
   };
   componentDidMount() {
     this.getArticleById(this.props.article_id);
@@ -22,7 +23,7 @@ class IndividualArticle extends Component {
     api
       .fetchArticleById(article_id)
       .then(({ article }) => {
-        this.setState({ article });
+        this.setState({ article, isLoading: false });
       })
       .catch(({ response: { data: { msg } } }) => {
         this.setState({ err: msg });
@@ -33,11 +34,12 @@ class IndividualArticle extends Component {
     const article = this.state.article;
     return (
       <>
+        {this.state.isLoading && <IsLoading />}
         {this.state.err && <ErrorPage msg={this.state.err} />}
-        {!this.state.err && (
+        {!this.state.err && !this.state.isLoading && (
           <div className="IndividualArticle">
             <h6>
-              {!this.state.err && (
+              {!this.state.err && !this.state.isLoading && (
                 <Votes
                   id={this.props.article_id}
                   votes={this.state.article.votes}
@@ -53,7 +55,9 @@ class IndividualArticle extends Component {
                     Posted in <strong>{article.topic}</strong>
                   </h4>
                   <div className="time-and-author">
-                    <h5>By {article.author}</h5>
+                    <h5>
+                      By <span>{article.author}</span>
+                    </h5>
                     <h6 className="time-posted">
                       {this.state.article.created_at
                         ? formatDates(article.created_at)
@@ -69,7 +73,9 @@ class IndividualArticle extends Component {
             </div>
           </div>
         )}
-        {!this.state.err && <Comments article_id={this.props.article_id} />}
+        {!this.state.err && !this.state.isLoading && (
+          <Comments article_id={this.props.article_id} />
+        )}
       </>
     );
   }

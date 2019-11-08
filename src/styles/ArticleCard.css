@@ -10,7 +10,9 @@ li.article-card {
 h6.time-posted {
   float: right;
   margin: 6px 0;
+  color: var(--main-yellow);
 }
+
 
 h4.posted-in {
   margin: auto;
@@ -43,4 +45,9 @@ button.read-more {
   margin: 16px 0;
   color: white;
   padding: 0;
+}
+
+
+.time-and-author h5 span {
+  color: var(--main-color);
 }

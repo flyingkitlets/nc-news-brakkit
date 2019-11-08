@@ -81,6 +81,7 @@ a {
   font-family: "Open Sans", sans-serif;
   text-align: left;
   color: #f8f8f2;
+  text-decoration: none;
 }
 
 .sorting-box select {

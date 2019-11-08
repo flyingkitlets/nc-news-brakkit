@@ -12,7 +12,7 @@
   color: var(--main-white);
 }
 button.back-to-list {
-  color: white;
+  color: var(--main-pink);
   margin: 24px 0 16px;
   padding: 0;
   text-decoration: none;
@@ -23,4 +23,8 @@ button.back-to-list {
 
 .IndividualArticle p {
     font-size: 12px;
+}
+
+.time-and-author h5 span {
+  color: var(--main-color);
 }

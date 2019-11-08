@@ -56,7 +56,7 @@ class ArticleList extends Component {
           this.state.articles.map(article => {
             return (
               <ArticleCard
-                {...article}
+                {...article} isOpen
                 key={`article-component ${article.article_id}`}
               />
             );
