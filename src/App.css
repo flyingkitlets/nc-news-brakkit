@@ -47,6 +47,11 @@ footer h4 {
   overflow: scroll;
 }
 
+img.placeholder {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
 @media screen and (max-width: 600px) {
   .MainBody {
     height: 82vh;
@@ -57,11 +62,12 @@ button {
   background: none;
   border: none;
   color: var(--main-fg);
-}
-
-button {
   display: block;
   margin: 16px auto;
+  cursor: pointer;
+}
+a {
+  cursor: pointer;
 }
 
 h1,

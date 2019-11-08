@@ -22,7 +22,9 @@ class ArticleList extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.topic !== this.props.topic) {
-      this.getArticles(this.state.sort_by, this.state.order_by);
+      this.setState({ isLoading: true }, () => {
+        this.getArticles(this.state.sort_by, this.state.order_by);
+      });
     }
   }
 
@@ -50,13 +52,14 @@ class ArticleList extends Component {
     return (
       <div className="ArticleList">
         {this.state.isLoading && <IsLoading />}
-        <Sorting sortData={this.sortData} />
+        {!this.state.isLoading && <Sorting sortData={this.sortData} />}
         {!this.state.err &&
           !this.state.isLoading &&
           this.state.articles.map(article => {
             return (
               <ArticleCard
-                {...article} isOpen
+                {...article}
+                isOpen
                 key={`article-component ${article.article_id}`}
               />
             );

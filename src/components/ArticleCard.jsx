@@ -9,6 +9,8 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 const ArticleCard = props => {
   const isOpen = props.isOpen;
   const article = props;
+  // let imgCount = 0;
+  // let collectionUrl = 1163637;
   return (
     <TransitionGroup component={null}>
       {isOpen && (
@@ -27,6 +29,13 @@ const ArticleCard = props => {
                   <Link to={`/articles/${article.article_id}`}>
                     <h3>{article.title}</h3>
                   </Link>
+                  <img
+                    className="placeholder"
+                    src={`https://source.unsplash.com/collection/145103/580x280/?sig=${Math.floor(
+                      Math.random() * 200
+                    ) + 1}`}
+                    alt="placeholder"
+                  />
                   <h4 className="posted-in">
                     Posted in <strong>{article.topic}</strong>
                   </h4>
