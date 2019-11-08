@@ -150,7 +150,7 @@ class Comments extends Component {
                 return (
                   <CSSTransition
                     in={this.state.allComments}
-                    timeout={3000}
+                    timeout={500}
                     classNames="list-transition"
                     unmountOnExit
                     appear
