@@ -9,8 +9,6 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 const ArticleCard = props => {
   const isOpen = props.isOpen;
   const article = props;
-  // let imgCount = 0;
-  // let collectionUrl = 1163637;
   return (
     <TransitionGroup component={null}>
       {isOpen && (

@@ -1,9 +1,10 @@
 li.article-card {
-  border: 1px solid #F8F8F2;
+  border: 1px solid #f8f8f2;
   margin: 16px;
   border-radius: 4px;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
+  background: var(--lighter-bg);
   padding: 16px 24px 16px 0;
 }
 
@@ -12,7 +13,6 @@ h6.time-posted {
   margin: 6px 0;
   color: var(--main-yellow);
 }
-
 
 h4.posted-in {
   margin: auto;
@@ -26,7 +26,7 @@ h4.posted-in {
   align-items: center;
 }
 li.article-card p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .actions h6 {
@@ -46,7 +46,6 @@ button.read-more {
   color: white;
   padding: 0;
 }
-
 
 .time-and-author h5 span {
   color: var(--main-color);

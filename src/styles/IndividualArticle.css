@@ -1,12 +1,12 @@
 .IndividualArticle {
-    border: 1px solid #F8F8F2;
-    margin: 16px;
-    border-radius: 4px;
-    display:flex;
-    align-items:center;
-    padding: 16px 24px 16px 0;
+  border: 1px solid #f8f8f2;
+  margin: 16px;
+  border-radius: 4px;
+  display: flex;
+  background: var(--lighter-bg);
+  align-items: center;
+  padding: 16px 24px 16px 0;
 }
-
 
 .button-actions button {
   color: var(--main-white);
@@ -20,9 +20,8 @@ button.back-to-list {
   background: none;
 }
 
-
 .IndividualArticle p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .time-and-author h5 span {

@@ -1,112 +1,108 @@
 .button-actions {
-    display: flex;
-    margin:auto;
-}
-
-.post-comment textarea {
-    width: 100%;
-    border-radius: 5px;
-    margin: 16px auto;
-    display: block;
-    background:var(--main-bg);
-    padding: 8px;
-    color:var(--main-fg);
-    border: 1px solid var(--main-fg);
-}
-
-.post-comment button {
-    color: var(--main-fg);
-    background: none;
-    border-radius: 4px;
-}
-
-.rest-of-comments li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 32px;
-}
-
-.rest-of-comments p {
-    font-size: 12px;
-}
-
-.rest-of-comments li div:first-child {
-    flex: 1;
-}
-
-.rest-of-comments li div:nth-child(2) {
-    flex: 7;
-}
-
-.comment-date-action button {
-    color: var(--main-cyan);
-    padding: 0;
-    margin: 0;
+  display: flex;
+  margin: auto;
 }
 
 .rest-of-comments {
-    border: 1px solid var(--main-fg);
-    margin: 16px;
-    border-radius: 5px;
-    padding: 32px 32px 32px 0;
+  background: var(--lighter-bg);
+}
+
+.post-comment textarea {
+  width: 100%;
+  border-radius: 5px;
+  margin: 16px auto;
+  display: block;
+  background: var(--main-bg);
+  padding: 8px;
+  color: var(--main-fg);
+  border: 1px solid var(--main-fg);
+}
+
+.post-comment button {
+  color: var(--main-fg);
+  background: none;
+  border-radius: 4px;
+}
+
+.rest-of-comments li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.rest-of-comments p {
+  font-size: 12px;
+}
+
+.rest-of-comments li div:first-child {
+  flex: 1;
+}
+
+.rest-of-comments li div:nth-child(2) {
+  flex: 7;
+}
+
+.comment-date-action button {
+  color: var(--main-cyan);
+  padding: 0;
+  margin: 0;
+}
+
+.rest-of-comments {
+  border: 1px solid var(--main-fg);
+  margin: 16px;
+  border-radius: 5px;
+  padding: 32px 32px 32px 0;
 }
 
 p.date {
-    color: var(--main-yellow);
-    font-family: "IBM Plex Mono", monospace;
-    font-size:0.6em;
-    font-weight:700;
+  color: var(--main-yellow);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.6em;
+  font-weight: 700;
 }
 
 .post-comment {
-    margin: 0 32px 0 16px;
+  margin: 0 32px 0 16px;
 }
 
 .rest-of-comments h5 {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 button.hide-comments {
-    margin: 0;
-    float: right;
-    text-align: right;
-    font-weight: 500;
+  margin: 0;
+  float: right;
+  text-align: right;
+  font-weight: 500;
 }
 
 .rest-of-comments li:last-of-type {
-    padding-bottom: 16px;
+  padding-bottom: 16px;
 }
 
-
-/* This fires as soon as the element enters the dorm */
 .list-transition-enter,
 .list-transition-appear {
-  /*We give the list the initial dimension of the list button*/
-  top: 0;
   width: 120px;
   max-height: 40px;
   opacity: 0;
   color: transparent;
-  /* background-color: #5a564c; */
 }
-/* This is where we can add the transition*/
 .list-transition-enter-active,
 .list-transition-appear-active {
-    width: auto;
-    max-height: 300px;
-    opacity: 1;
+  width: auto;
+  max-height: 300px;
+  opacity: 1;
   transition: all 300ms ease-in-out;
 }
 
-/* This fires as soon as the this.state.showList is false */
 .outer-transition-exit {
   max-height: 200px;
-  height:0px;
+  height: 0px;
 }
-/* fires as element leaves the DOM*/
 .outer-transition-exit-active {
-    height:0px;
+  height: 0px;
   max-height: 40px;
   color: transparent;
   transition: all 400ms;
