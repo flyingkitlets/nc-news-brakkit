@@ -5,7 +5,6 @@ import Votes from "./Votes";
 import { Link } from "@reach/router";
 import formatDates from "../utils/data-manipulation";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-// import IsLoading from "./IsLoading";
 
 const ArticleCard = props => {
   const isOpen = props.isOpen;
@@ -13,7 +12,7 @@ const ArticleCard = props => {
   return (
     <TransitionGroup component={null}>
       {isOpen && (
-        <CSSTransition classNames="dialog" timeout={300}>
+        <CSSTransition transitionName="example" timeout={300}>
           <>
             <div>
               <li className="article-card" key={article.article_id}>
@@ -25,7 +24,9 @@ const ArticleCard = props => {
                   />
                 </div>
                 <div>
-                  <h3>{article.title}</h3>
+                  <Link to={`/articles/${article.article_id}`}>
+                    <h3>{article.title}</h3>
+                  </Link>
                   <h4 className="posted-in">
                     Posted in <strong>{article.topic}</strong>
                   </h4>

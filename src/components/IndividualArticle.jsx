@@ -26,7 +26,7 @@ class IndividualArticle extends Component {
         this.setState({ article, isLoading: false });
       })
       .catch(({ response: { data: { msg } } }) => {
-        this.setState({ err: msg });
+        this.setState({ err: msg , isLoading: false});
       });
   };
 

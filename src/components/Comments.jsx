@@ -4,6 +4,7 @@ import formatDates from "../utils/data-manipulation";
 import Votes from "./Votes";
 import ErrorPage from "./ErrorPage";
 import "../styles/Comments.css";
+import { CSSTransition } from "react-transition-group";
 
 class Comments extends Component {
   state = {
@@ -70,11 +71,13 @@ class Comments extends Component {
         });
     }
   };
+
   showAllComments = () => {
     !this.state.allComments
       ? this.setState({ allComments: true })
       : this.hideAllComments();
   };
+
   hideAllComments = () => {
     this.setState({ allComments: false });
   };
@@ -87,6 +90,7 @@ class Comments extends Component {
     if (!this.state.enteredCommentBox)
       this.setState({ enteredCommentBox: true, commentBody: "" });
   };
+
   removeComment = comment_id => {
     api.deleteComment(comment_id).then(data => {
       this.setState(currentState => {
@@ -134,40 +138,60 @@ class Comments extends Component {
         )}
         {this.state.err && <ErrorPage msg={this.state.err} />}
         {this.state.allComments && !this.state.isLoading && (
-          <div className="rest-of-comments">
-            {this.state.comments.map(comment => {
-              return (
-                <li key={comment.comment_id}>
-                  <div>
-                    <Votes
-                      id={comment.comment_id}
-                      votes={comment.votes}
-                      type="comments"
-                    />
-                  </div>
-                  <div>
-                    <h5>{comment.author}</h5>
-                    <p>{comment.body}</p>
-                    <div className="comment-date-action">
-                      {" "}
-                      <p className="date">{formatDates(comment.created_at)}</p>
-                      {comment.author === "jessjelly" && (
-                        <button
-                          className="delete-comment"
-                          onClick={() => this.removeComment(comment.comment_id)}
-                        >
-                          Delete Comment
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                </li>
-              );
-            })}
-            <button className="hide-comments" onClick={this.hideAllComments}>
-              Hide Comments
-            </button>
-          </div>
+          <CSSTransition
+            in={this.state.allComments}
+            timeout={3000}
+            classNames="outer-transition"
+            unmountOnExit
+            appear
+          >
+            <div className="rest-of-comments">
+              {this.state.comments.map(comment => {
+                return (
+                  <CSSTransition
+                    in={this.state.allComments}
+                    timeout={3000}
+                    classNames="list-transition"
+                    unmountOnExit
+                    appear
+                    key={`tranition-${comment.comment_id}`}
+                  >
+                    <li key={comment.comment_id}>
+                      <div>
+                        <Votes
+                          id={comment.comment_id}
+                          votes={comment.votes}
+                          type="comments"
+                        />
+                      </div>
+                      <div>
+                        <h5>{comment.author}</h5>
+                        <p>{comment.body}</p>
+                        <div className="comment-date-action">
+                          <p className="date">
+                            {formatDates(comment.created_at)}
+                          </p>
+                          {comment.author === "jessjelly" && (
+                            <button
+                              className="delete-comment"
+                              onClick={() =>
+                                this.removeComment(comment.comment_id)
+                              }
+                            >
+                              Delete Comment
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    </li>
+                  </CSSTransition>
+                );
+              })}
+              <button className="hide-comments" onClick={this.hideAllComments}>
+                Hide Comments
+              </button>
+            </div>
+          </CSSTransition>
         )}
       </div>
     );
