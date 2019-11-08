@@ -1,0 +1,59 @@
+.button-actions {
+    display: flex;
+    margin:auto;
+}
+
+.post-comment textarea {
+    width: 80%;
+    border-radius: 5px;
+    margin: 16px auto;
+    display: block;
+    background:var(--main-bg);
+    padding: 8px;
+    color:var(--main-fg);
+    border: 1px solid var(--main-fg);
+}
+
+.post-comment button {
+    color: var(--main-fg);
+    background: none;
+    border-radius: 4px;
+}
+
+.rest-of-comments li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.rest-of-comments p {
+    font-size: 12px;
+}
+
+.rest-of-comments li div:first-child {
+    flex: 1;
+}
+
+.rest-of-comments li div:nth-child(2) {
+    flex: 7;
+}
+
+.comment-date-action {
+    display: flex;
+    justify-content:space-between;
+}
+
+.comment-date-action button {
+    color: white;
+    padding:0;
+    margin:0 16px 0;
+
+}
+
+.rest-of-comments {
+    border: 1px solid var(--main-fg);
+    margin: 16px;
+    border-radius: 5px;
+    padding: 32px 32px 32px 0;
+}

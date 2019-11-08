@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Open+Sans&display=swap");
+
+*:focus {
+  outline: none;
+}
+
+.App {
+  text-align: center;
+  background: #0f141a;
+  --main-color: #6cea87;
+  --main-bg: #0f141a;
+  --main-fg: #f8f8f2;
+  --main-cyan: #8be9fd;
+  --main-green: #50fa7b;
+  --main-orange: #ffb86c;
+  --main-pink: #ff79c6;
+  --main-purple: #bd93f9;
+  --main-red: #ff5555;
+  --main-yellow: #f1fa8c;
+  --main-white: #ffffff;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+  margin: auto;
+}
+
+footer h4 {
+  margin: 8px auto;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: 120px auto 96px;
+}
+
+.MainBody {
+  grid-row: 2/3;
+  max-width: 600px;
+  margin: auto;
+  height: 78vh;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 600px) {
+  .MainBody {
+    height: 82vh;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  color: var(--main-fg);
+}
+
+button {
+  display: block;
+  margin: 16px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "IBM Plex Mono", monospace;
+  text-align: left;
+  color: var(--main-fg);
+}
+
+p,
+span,
+a {
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  color: #f8f8f2;
+}
+
+.sorting-box select {
+  border: 1px solid black;
+  padding: 8px 16px;
+}
+
+.error-msg h1 {
+  text-align: center;
+  padding: 32px;
+}
+
+.error-msg a {
+  text-decoration: none;
+}

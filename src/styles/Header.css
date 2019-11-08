@@ -1,0 +1,26 @@
+h1.main-header span {
+  color: var(--main-color);
+  font-size: 0.8em;
+  margin-right: 16px;
+  margin-bottom: 4px;
+}
+
+h1.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1.main-header {
+  text-align: center;
+}
+.header-component a {
+  color: var(--main-fg);
+  font-size: 1em;
+  text-decoration: none;
+}
+
+
+.header-component a {
+    text-decoration: none;
+}

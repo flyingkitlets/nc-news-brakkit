@@ -1,0 +1,18 @@
+
+.sorting-box select {
+    background: none;
+    color: var(--main-fg);
+    border: 1px solid var(--main-fg);
+    padding: 6px;
+}
+
+.sorting-box {
+    margin: 16px auto 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sorting-box h3 {
+    margin-right:16px;
+    font-size:0.8em;
+}

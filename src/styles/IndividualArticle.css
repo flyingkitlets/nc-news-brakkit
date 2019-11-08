@@ -1,0 +1,26 @@
+.IndividualArticle {
+    border: 1px solid #F8F8F2;
+    margin: 16px;
+    border-radius: 4px;
+    display:flex;
+    align-items:center;
+    padding: 16px 24px 16px 0;
+}
+
+
+.button-actions button {
+  color: var(--main-white);
+}
+button.back-to-list {
+  color: white;
+  margin: 24px 0 16px;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  background: none;
+}
+
+
+.IndividualArticle p {
+    font-size: 12px;
+}

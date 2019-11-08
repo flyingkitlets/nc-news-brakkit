@@ -1,0 +1,22 @@
+.votes {
+  display: flex;
+  justify-content: center;
+  font-size: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 12px 0 8px;
+}
+
+.votes h4 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+}
+
+svg.active-up {
+  color: var(--main-color);
+}
+
+svg.active-down {
+  color: var(--main-cyan);
+}
