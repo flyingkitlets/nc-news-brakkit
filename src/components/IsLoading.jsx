@@ -3,7 +3,7 @@ import React from 'react';
 const IsLoading = () => {
     return (
         <div>
-            <h1>Loading Another Test, Hopefully</h1>
+            <h1>Loading</h1>
         </div>
     );
 };
