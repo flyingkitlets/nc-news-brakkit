@@ -7,6 +7,7 @@ import ErrorPage from "./ErrorPage";
 import Votes from "./Votes";
 import formatDates from "../utils/data-manipulation";
 import IsLoading from "./IsLoading";
+import BurgerMenu from "./BurgerMenu";
 
 class IndividualArticle extends Component {
   state = {
@@ -34,6 +35,7 @@ class IndividualArticle extends Component {
     const article = this.state.article;
     return (
       <>
+      <BurgerMenu />
         {this.state.isLoading && <IsLoading />}
         {this.state.err && <ErrorPage msg={this.state.err} />}
         {!this.state.err && !this.state.isLoading && (

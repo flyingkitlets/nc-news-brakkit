@@ -18,7 +18,7 @@ class Sorting extends Component {
   }
   render() {
     return (
-      <div className="sorting-box"><h3>Sort By: </h3>
+      <div className="sorting-box"><h3>Sort By:</h3>
         <select onChange={this.updateSortBy}>
           <option value="created_at desc">Newest</option>
           <option value="created_at asc">Oldest</option>

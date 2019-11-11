@@ -1,0 +1,104 @@
+a.bm-item {
+  text-align: right;
+  padding: 16px 0;
+  transition: 0.3s ease-in-out;
+}
+
+a.bm-item:hover {
+  color: var(--main-color);
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 28px;
+  top: 28px;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+  transition: 0.3s ease-in-out;
+}
+
+.bm-burger-bars-hover {
+  background: var(--main-color);
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 84px;
+}
+.bm-cross {
+  display: none;
+}
+
+span.bm-burger-bars {
+  border-radius: 5px;
+}
+
+nav.bm-item-list {
+  max-height: 82vh;
+  overflow: hidden;
+}
+
+.bm-menu {
+  background: var(--lighter-bg);
+  padding: 16px 12px 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+.bm-item {
+  display: inline-block;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  left: 0;
+  top: 0;
+}
+
+.bm-item.user-actions h3 {
+  text-align: right;
+  font-size: 0.8em;
+}
+
+.bm-item.user-actions h3 span {
+  color: var(--main-color);
+  display: block;
+  text-align: right;
+}
+
+.bm-item.user-actions img {
+  display: block;
+  float: right;
+}
+
+.bm-item.user-actions {
+  display: block;
+  margin: 96px auto;
+}
+
+
+nav.bm-item-list a {
+    font-family: "IBM Plex Mono", monospace;
+}

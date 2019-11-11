@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import * as api from "../utils/api";
 import ArticleCard from "./ArticleCard";
 import "../styles/ArticleList.css";
-import Sorting from "./Sorting";
 import ErrorPage from "./ErrorPage";
 import IsLoading from "./IsLoading";
+import BurgerMenu from "./BurgerMenu";
 
 class ArticleList extends Component {
   state = {
@@ -52,7 +52,7 @@ class ArticleList extends Component {
     return (
       <div className="ArticleList">
         {this.state.isLoading && <IsLoading />}
-        {!this.state.isLoading && <Sorting sortData={this.sortData} />}
+        <BurgerMenu sortData={this.sortData} articleList={true} />
         {!this.state.err &&
           !this.state.isLoading &&
           this.state.articles.map(article => {

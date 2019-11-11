@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Nav from "./Nav";
-import '../styles/Header.css'
+import "../styles/Header.css";
 import { Link } from "@reach/router";
 
 class Header extends Component {
@@ -8,13 +7,13 @@ class Header extends Component {
     return (
       <div className="header-component">
         <Link to="/">
-          <h1 className="main-header"><span>&gt;_&lt;</span>Brakkit</h1>
+          <h1 className="main-header">
+            <span>&gt;_&lt;</span>Brakkit
+          </h1>
         </Link>
-        <Nav />
       </div>
     );
   }
 }
 
 export default Header;
-

@@ -11,6 +11,15 @@ h1.main-header {
   align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  h1.main-header span {
+    display: none;
+  }
+  h1.main-header{
+    width:50%;
+  }
+}
+
 h1.main-header {
   text-align: center;
 }
@@ -20,7 +29,6 @@ h1.main-header {
   text-decoration: none;
 }
 
-
 .header-component a {
-    text-decoration: none;
+  text-decoration: none;
 }
