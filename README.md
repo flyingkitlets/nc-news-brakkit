@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Brakkit
 
-## Available Scripts
+Brakkit is a Reddit-style news aggregation app that utilises the wisdom of the crowds by prioritising content that has been upvoted. 
 
-In the project directory, you can run:
+The app has three main topics - Football, Coding and Cooking. The user is able to filter through these topics, or by default, display them all. The app also allows for sorting by date and popularity.
 
-### `npm start`
+The app will always by default be logged in as user <b>jessjelly</b>, meaning any votes and/or comments made will be by said user. The user also has the ability to delete their own comments.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The hosted version can be found at:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+[https://brakkit-fks.netlify.com/](https://brakkit-fks.netlify.com/)
 
-### `npm test`
+The repo for the RESTful API I built to serve the data can be found here:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[https://github.com/flyingkitlets/be-nc-news](https://github.com/flyingkitlets/be-nc-news)
 
-### `npm run build`
+The hosted version of said API can be found here:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[https://nc-news-tes.herokuapp.com/api](https://nc-news-tes.herokuapp.com/api)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Please follow the instructions below to set up a local copy of this app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Step 1
 
-### `npm run eject`
+First, you must use your terminal to navigate to a location on your computer where you would like to install the repo. Then, run the following line:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+git clone https://github.com/flyingkitlets/nc-news-brakkit
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Step 2
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This app has several dependencies for it to function:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- @material-ui/core: ^4.6.0,
+- @material-ui/icons: ^4.5.1,
+- @reach/router: ^1.2.1,
+- @svgdotjs/svg.js: ^3.0.14,
+- axios: ^0.19.0,
+- chai: ^4.2.0,
+- mocha: ^6.2.2,
+- netlify-cli: ^2.20.2,
+- react: ^16.11.0,
+- react-burger-menu: ^2.6.12,
+- react-dom: ^16.11.0,
+- react-scripts: 3.2.0,
+- react-transition-group: ^4.3.0
 
-## Learn More
+To install these, run the following line once you have opened the repo in your IDE:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm i
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Step 3
 
-### Code Splitting
+After all dependencies are installed, you can launch a local version of the app by running: 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Thanks, I hope you enjoy the app!
